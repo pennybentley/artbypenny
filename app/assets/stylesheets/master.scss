@@ -73,3 +73,20 @@ h1, h2, h3, h4, h5, h6, .navbar {
   padding-right: 5%;
 }
 
+.penny-box h2, .penny-box h1 {
+  margin: 10px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#flex-content-container {
+  flex: 1;
+}
