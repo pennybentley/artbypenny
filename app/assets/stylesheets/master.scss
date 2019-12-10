@@ -6,6 +6,7 @@ background: url('Cover.jpg') no-repeat center center fixed;
   -o-background-size: cover;  
   background-size:  cover;
   height: 600px;
+  box-shadow: 0px 3px 8px #2a2a2a;
 }
 
 
@@ -29,4 +30,31 @@ background: url('Cover.jpg') no-repeat center center fixed;
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
+
+.frost {
+  background: rgba(0, 0, 0, 0.5);
+  color: cyan;
+}
+
+.frost h1 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+}
+
+.frost h2 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+  }
+
+.btn {
+  border-radius: 0;
+  background: blue;
+  border-color: blue;
 }
