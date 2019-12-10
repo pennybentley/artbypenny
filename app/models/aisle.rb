@@ -1,2 +1,3 @@
 class Aisle < ApplicationRecord
+  
 end
