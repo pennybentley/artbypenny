@@ -20,7 +20,15 @@ background: url('Cover.jpg') no-repeat center center fixed;
 .navbar-inverse a.navbar-brand {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
-  color: gray;
+  color: shite;
+}
+
+.navbar-light .navbar-brand  {
+  color: cyan;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: cyan;
 }
 
 .penny-box {
@@ -65,7 +73,3 @@ h1, h2, h3, h4, h5, h6, .navbar {
   padding-right: 5%;
 }
 
-body {
-  background: image_url('bg.png');
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-}
