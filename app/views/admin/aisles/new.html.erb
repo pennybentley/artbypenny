@@ -2,10 +2,11 @@
 <div class="penny-box col-10 offset-1">
   <h1>Add a new aisle</h1>
     <%= simple_form_for @aisle, url: admin_aisles_path do |f| %>
+      <%= f.input :aname %>
       <%= f.input :adescr %>
       <br />
       <%= f.submit "Create", class: 'btn btn-primary' %>
       <br />
     <% end %>
   <br />
-</div>
+</div> 

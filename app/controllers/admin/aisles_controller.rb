@@ -17,7 +17,8 @@ class Admin::AislesController < ApplicationController
   private
 
   def aisle_params
-    params.permit(:adescr)
+    params.require(:aname).permit(:adescr)
   end
 
 end
+ 
