@@ -1,15 +1,13 @@
 class Admin::AislesController < ApplicationController
+  before_action :authenticate_user!
 
   def new
     @aisle = Aisle.new
   end
 
   def create
-    @aisle = Aisle.create(aisle_params)
-    if @aisle.invalid?
-      flash[:error] = '<strong>Could not save</strong> the data you entered is invalid.'
-    end
-    redirect_to root_path(@course)
+    @aisle = current_user.aisles.create(aisle_params)
+    redirect_to admin_aisle_path(@aisle)
   end
 
   def show
@@ -18,10 +16,8 @@ class Admin::AislesController < ApplicationController
 
   private
 
-    def aisle_params
-      params.require(:adescr)
-    end
+  def aisle_params
+    params.require(:aname).permit(:adescr)
+  end
 
 end
-
-
