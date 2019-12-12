@@ -3,6 +3,7 @@ class CreateAisles < ActiveRecord::Migration[5.2]
     create_table :aisles do |t|
       t.string :aname
       t.text :adescr
+      t.integer :user_id
       t.timestamps
     end
   end

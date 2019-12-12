@@ -7,7 +7,11 @@ class Admin::AislesController < ApplicationController
 
   def create
     @aisle = current_user.aisles.create(aisle_params)
-    redirect_to admin_aisle_path(@aisle)
+    if @aisle.valid?
+      redirect_to admin_aisle_path(@aisle)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show
@@ -17,7 +21,7 @@ class Admin::AislesController < ApplicationController
   private
 
   def aisle_params
-    params.require(:aname).permit(:adescr)
+    params.require(:aisle).permit(:aname, :adescr)
   end
 
 end

@@ -1,4 +1,21 @@
 <br />
 <div class="col-10 offset-1">
-  <h1 class="text-center"><%= @aisle.adescr %></h1>
+  <h1 class="text-center"><%= @aisle.aname %></h1>
+  <h2 class="text-center"><%= @aisle.adescr %></h2>
+  <br />
+  <div class="text-center">
+    <%= link_to 'Add a new product', new_admin_aisle_product_path(@aisle), class: 'btn btn-primary btn-lg' %>
+  </div>
+  <%= link_to 'Preview As Shopper...', aisle_path(@aisle), class: 'btn btn-warning float-right' %>
+  <br class="clr" />
+
+  <ul>
+    <% @aisle.products.each do |product| %>
+      <li>
+        Name: <%= product.pname %> - <%= product.inspect %>
+      </li>
+    <% end %>
+  </ul>
+
+
 </div>
