@@ -1,1 +1,15 @@
-<h1> aisles </h1>
+<br />
+
+<div class="penny-box col-10 offset-1">
+  <h1 class="text-center">Shop for something today...</h1>
+  <hr />
+    <div class="row">
+      <% @aisles.each do |aisle| %>
+        <h2 class="text-center"><%= aisle.aname %> - <%= aisle.adescr %></h2>
+        <div class="col-sm-4 col-12 text-left">
+          <%= link_to 'Button', '#', class: 'btn btn-primary btn-large' %>
+        </div>
+      <% end %>
+    </div>
+  <br class="clr" />
+</div>
