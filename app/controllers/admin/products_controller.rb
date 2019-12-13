@@ -21,7 +21,7 @@ class Admin::ProductsController < ApplicationController
   private
 
     def product_params
-       params.require(:product).permit(:aname, :adescr)
+       params.require(:product).permit(:pname, :pdescr)
     end
 
 end

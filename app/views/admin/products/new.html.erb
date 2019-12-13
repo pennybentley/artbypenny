@@ -2,7 +2,7 @@
 <div class="penny-box col-10 offset-1">
   <h1> Add a product </h1>
     <%= simple_form_for @product, url: admin_aisle_products_path(@aisle) do |f| %>
-      <%= f.input :pname, label: 'Name', error: 'Name is mandatory, please specify one'%>
+      <%= f.input :pname, label: 'Name', error: 'Name is mandatory, please specify one' %>
       <%= f.input :pdescr, label: 'Description', error: 'Description is mandatory, please specify one' %>
     <%= f.submit "Add a product", class: 'btn btn-primary'  %>
   <% end %>
