@@ -15,7 +15,7 @@ class Admin::ProdPicsController < ApplicationController
   private
 
     def prod_pic_params
-      params.require(:prod_pic).permit(:ptext)
+      params.require(:prod_pic).permit(:ptext, :image)
     end
 
 end

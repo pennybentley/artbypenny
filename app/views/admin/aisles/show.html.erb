@@ -18,8 +18,10 @@
         <ul>
           <% product.prod_pics.each do |prod_pic| %>
             <li>
+              <b><%= image_tag prod_pic.image.to_s, class: 'img-fluid' %></b>
               <b><%= prod_pic.ptext %></b>
             </li>
+
           <% end %>
         </ul>
 

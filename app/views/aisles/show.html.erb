@@ -1,0 +1,20 @@
+<br />
+
+<div class="penny-box col-10 offset-1">
+  <h1><%= @aisle.aname %></h1>
+  <br />
+  <div class="row">
+
+    <div class="col-sm-8 col-12">
+      <%= @aisle.adescr %>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <% @aisle.products.each do |product| %>
+      <div class="product">
+        <%= product.pname %>
+      </div>
+    <% end %>
+  </div>
+</div>

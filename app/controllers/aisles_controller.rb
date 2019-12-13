@@ -4,4 +4,8 @@ class AislesController < ApplicationController
     @aisles = Aisle.all
   end
 
+  def show
+    @aisle = Aisle.find(params[:id])
+  end
+
 end
