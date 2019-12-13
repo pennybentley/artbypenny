@@ -3,7 +3,7 @@
   <h1> Add Product Images </h1>
     <%= simple_form_for @prod_pic, url: admin_product_prod_pics_path(@product) do |f| %>
     <%= f.input :image %>
-    <%= f.input :ptext %>
+    <%= f.input :ptext, label: 'Description', %>
     <br />
     <%= f.submit "Add the image" %>
     <br />
