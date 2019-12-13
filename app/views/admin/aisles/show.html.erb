@@ -12,7 +12,18 @@
   <ul>
     <% @aisle.products.each do |product| %>
       <li>
-        Name: <%= product.pname %> - <%= product.descr %>
+        Name: <%= product.pname %> - <%= product.pdescr %>
+        <%= link_to 'New Product Image', new_admin_product_prod_pic_path(product), class: 'float-right btn btn-primary btn-sm' %>
+
+        <ul>
+          <% product.prod_pics.each do |prod_pic| %>
+            <li>
+              <b><%= prod_pic.ptext %></b>
+            </li>
+          <% end %>
+        </ul>
+
+        <br class="clr" />
       </li>
     <% end %>
   </ul>

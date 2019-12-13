@@ -1,0 +1,2 @@
+module Admin::ProdPicsHelper
+end

@@ -1,0 +1,9 @@
+<br />
+<div class="penny-box col-10 offset-1">
+  <h1> Add Product Images </h1>
+    <%= simple_form_for @prod_pic, url: admin_product_prod_pics_path(@product) do |f| %>
+    <%= f.input :ptext %>
+    <br />
+    <%= f.submit "Add the image" %>
+    <br />
+  <% end %>
