@@ -4,7 +4,13 @@
     <br />
     <h1 > Art by Penny  </h1>
     <br />
-    <%= link_to 'Learn More', '#', class: 'btn btn-success' %>
+    <div class="col-10 offset-1">
+      <% @aisles.each do |aisle| %>
+        <h3><%= aisle.aname %> - <%= aisle.adescr %></h3>
+        <div class="col-sm-4 col-12 text-right">
+          <%= link_to 'Browse Aisle', aisle_path(aisle), class: 'btn btn-primary' %>
+        </div>
+      <% end %>
   </div>
 </div>
 

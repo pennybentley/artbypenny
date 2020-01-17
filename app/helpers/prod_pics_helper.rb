@@ -1,0 +1,2 @@
+module ProdPicsHelper
+end

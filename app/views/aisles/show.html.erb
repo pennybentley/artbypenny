@@ -13,7 +13,10 @@
   <div class="col-12">
     <% @aisle.products.each do |product| %>
       <div class="product">
-        <%= product.pname %>
+        <b><%= product.pname %></b>
+        <% product.prod_pics.each do |prod_pic| %>          
+          <b><%= image_tag prod_pic.image.to_s, class: 'img-fluid' %></b>
+        <% end %>
       </div>
     <% end %>
   </div>

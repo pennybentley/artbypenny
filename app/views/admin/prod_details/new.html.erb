@@ -1,0 +1,12 @@
+<br />
+<div class="penny-box col-10 offset-1">
+  <h1> Add Product Details </h1>
+    <%= simple_form_for @prod_detail, url: admin_product_prod_details_path(@product) do |f| %>
+      <%= f.input :psize, label: 'Size' %>
+      <%= f.input :price, label: 'Description' %>
+      <%= f.input :pship, label: 'Shipping' %>
+      <%= f.input :qtyinhand, input_html: { value: 1 } %>
+      <br />
+      <%= f.submit "Add the details" %>
+      <br />
+  <% end %>
