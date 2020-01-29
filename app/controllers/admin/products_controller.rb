@@ -18,6 +18,28 @@ class Admin::ProductsController < ApplicationController
 
   end
 
+  def edit
+    session[:return_to] ||= request.referer
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+
+    @product.update_attributes(product_params)
+    if @product.valid?
+      redirect_back fallback_location: root_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to current_path
+  end
+
   private
 
     def product_params

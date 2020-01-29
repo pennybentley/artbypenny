@@ -3,12 +3,11 @@ Rails.application.routes.draw do
   root 'landing#index'
   resources :aisles, only: [:index, :show]
   namespace :admin do
-    resources :products, only: [] do
-        resources :prod_pics, only: [:new, :create]
-        resources :prod_details, only: [:new, :create] 
+    resources :products do
+        resources :prod_pics, only: [:new, :create, :destroy, :edit, :update, :patch]
     end
-    resources :aisles, only: [:new, :create, :show] do
-      resources :products, only: [:new, :create] 
+    resources :aisles, only: [:new, :create, :show, :destroy, :edit, :update, :patch] do
+      resources :products, only: [:new, :create, :destroy, :patch] 
     end
   end
 

@@ -95,3 +95,28 @@ body {
 .clr {
   clear: both;
 }
+
+.paginate-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.pagination {
+  background: white;
+  cursor: default;
+  height: 22px;
+  a, span, em {
+    padding: 0.0em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px;
+  }
+
+  

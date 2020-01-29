@@ -8,7 +8,9 @@
       <% @aisles.each do |aisle| %>
         <h3><%= aisle.aname %> - <%= aisle.adescr %></h3>
         <div class="col-sm-4 col-12 text-right">
-          <%= link_to 'Browse Aisle', aisle_path(aisle), class: 'btn btn-primary' %>
+          <%= link_to 'Browse Aisle', aisle_path(aisle), class: 'btn btn-large' %>
+          <%= link_to 'Update Aisle', edit_admin_aisle_path(aisle), class: 'btn btn-primary btn-large' %>
+          <%= link_to 'Delete this Aisle', admin_aisle_path(aisle), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger'  %> 
         </div>
       <% end %>
   </div>

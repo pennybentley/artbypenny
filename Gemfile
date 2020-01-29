@@ -76,3 +76,5 @@ gem 'carrierwave'
 gem 'figaro'
 gem 'fog-aws'
 gem 'mini_magick'
+
+gem 'will_paginate', '~> 3.0'

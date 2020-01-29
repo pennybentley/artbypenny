@@ -4,6 +4,11 @@
     <%= simple_form_for @product, url: admin_aisle_products_path(@aisle) do |f| %>
       <%= f.input :pname, label: 'Name', error: 'Name is mandatory, please specify one' %>
       <%= f.input :pdescr, label: 'Description', error: 'Description is mandatory, please specify one' %>
+      <%= f.input :psize, label: 'Size' %>
+      <%= f.input :pcolor, label: 'Color' %>
+      <%= f.input :price, label: 'Price' %>
+      <%= f.input :pship, label: 'Shipping' %>
+      <%= f.input :qtyonhand, input_html: { value: 1 } %>
     <%= f.submit "Add a product", class: 'btn btn-primary'  %>
   <% end %>
 </div>
